@@ -1,0 +1,45 @@
+<h1>Listing activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image url</th>
+      <th>County</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Days and times</th>
+      <th>Price per class</th>
+      <th>Email</th>
+      <th>Contact person</th>
+      <th>Contact no</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <td><%= activity.image_url %></td>
+        <td><%= activity.county %></td>
+        <td><%= activity.description %></td>
+        <td><%= activity.address %></td>
+        <td><%= activity.days_and_times %></td>
+        <td><%= activity.price_per_class %></td>
+        <td><%= activity.email %></td>
+        <td><%= activity.contact_person %></td>
+        <td><%= activity.contact_no %></td>
+        <td><%= activity.string %></td>
+        <td><%= link_to 'Show', activity %></td>
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_activity_path %>
