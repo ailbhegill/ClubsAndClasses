@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  image_url: MyString
+  image_url: MyString.jpg
   county: MyString
   description: MyText
   address: MyText
@@ -13,8 +13,8 @@ one:
   contact_no: MyString
 
 two:
-  name: MyString
-  image_url: MyString
+  name: MyString1
+  image_url: MyString.png
   county: MyString
   description: MyText
   address: MyText
