@@ -1,41 +1,46 @@
-<h1>Listing activities</h1>
+<h1>Clubs and Classes</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image url</th>
-      <th>County</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th>Days and times</th>
-      <th>Price per class</th>
-      <th>Email</th>
-      <th>Contact person</th>
-      <th>Contact no</th>
-      <th>String</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.name %></td>
-        <td><%= activity.image_url %></td>
-        <td><%= activity.county %></td>
-        <td><%= activity.description %></td>
-        <td><%= activity.address %></td>
-        <td><%= activity.days_and_times %></td>
-        <td><%= activity.price_per_class %></td>
-        <td><%= activity.email %></td>
-        <td><%= activity.contact_person %></td>
-        <td><%= activity.contact_no %></td>
-        <td><%= activity.string %></td>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= content_tag :tr, class: cycle('list_line_odd', 'list_line_even') do %>
+	<td>
+            <%= image_tag(activity.image_url, size: "100x100", class: 'list_image') %>
+        </td>
+        <td class='list_description'>
+           <dl>
+              <dt><%= activity.name %></dt>
+              <dd>
+                <%= truncate strip_tags(activity.description), length: 240 %>
+	      </dd>
+              <dd>
+		<b>Address:</b>
+		<%= truncate strip_tags(activity.address), length: 240 %>
+		<%= truncate strip_tags(activity.county), length: 240 %>
+	      </dd>
+              <dd>
+		<b>Days and times:</b>
+		<%= truncate strip_tags(activity.days_and_times), length: 240 %>
+	      </dd>
+              <dd>
+		<b>Price per class:</b>
+		<%activity.price_per_class%>
+	      </dd>
+              <dd>
+		<b>Contact Details:</b>
+		<%= truncate strip_tags(activity.contact_person), length: 240 %>
+		<%= truncate strip_tags(activity.contact_no), length: 240 %>
+		<%= truncate strip_tags(activity.email), length: 240 %>
+	      </dd>
+          </dl>
+        </td>
+        <td>
+	   <%= link_to 'Show', activity %>
+           <%= link_to 'Edit', edit_activity_path(activity) %>
+           <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      <% end %>
     <% end %>
   </tbody>
 </table>
