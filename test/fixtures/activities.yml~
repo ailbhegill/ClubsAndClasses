@@ -7,10 +7,11 @@ one:
   description: MyText
   address: MyText
   days_and_times: MyText
-  price_per_class: 1.5
+  price_per_class: 1
   email: MyString
   contact_person: MyString
   contact_no: MyString
+  string: MyString
 
 two:
   name: MyString
@@ -19,7 +20,8 @@ two:
   description: MyText
   address: MyText
   days_and_times: MyText
-  price_per_class: 1.5
+  price_per_class: 1
   email: MyString
   contact_person: MyString
   contact_no: MyString
+  string: MyString
