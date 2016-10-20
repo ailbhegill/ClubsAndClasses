@@ -7,7 +7,47 @@
 
 <% @activities.each do |activity| %>
   <div class="entry">
-    <%= image_tag(activity.image_url, size: "100x100", class: 'list_image') %>
+    <%= image_tag(activity.image_url) %>
+    <!--<%= image_tag(activity.image_url, size: "100x100", class: 'list_image') %>-->    
+		<h3><%= activity.name %></h3>
+    <p>
+    <%= sanitize activity.description %>
+		</p>
+		<p>
+    <b>Address:</b>
+    <%= sanitize activity.address %>
+    <%= sanitize activity.county %>
+		</p>
+		<p>
+    <b>Days and times:</b>
+    <%= sanitize activity.days_and_times %>
+    </p>
+		<p>
+		<b>Contact Details:</b>
+    <%= sanitize activity.contact_person %>
+    <%= sanitize activity.contact_no%>
+    <%= sanitize activity.email%>
+		</p>
+    <div class="price_line">
+      <b>Price per class:</b>
+      <span class="price"><%= activity.price_per_class %></span>
+    </div>
+  </div>
+<% end %>
+
+
+<!--image_url county description address days_and_times price_per_class email contact_person contact_no
+
+<html>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Clubs and Classes</h1>
+
+<% @activities.each do |activity| %>
+  <div class="entry">
+    <%= image_tag(activity.image_url) %>
     <h3><%= activity.name %></h3>
     <%= sanitize activity.description %>
     <div class="address_line">
@@ -19,19 +59,16 @@
     <b>Days and times:</b>
     <%= truncate strip_tags(activity.days_and_times), length: 240 %>
     </div>
-    <div class="price_line">
-      <b>Price per class:</b>
-      <span class="price"><%= activity.price_per_class %></span>
-    </div>
     <div class="contact_line">
     <b>Contact Details:</b>
     <%= truncate strip_tags(activity.contact_person), length: 240 %>
     <%= truncate strip_tags(activity.contact_no), length: 240 %>
     <%= truncate strip_tags(activity.email), length: 240 %>
     </div>
+    <div class="price_line">
+      <b>Price per class:</b>
+      <span class="price"><%= activity.price_per_class %></span>
+    </div>
   </div>
-<% end %>
-
-
-<!--image_url county description address days_and_times price_per_class email contact_person contact_no-->
+<% end %>-->
 
