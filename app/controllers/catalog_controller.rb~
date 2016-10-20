@@ -1,5 +1,5 @@
 class CatalogController < ApplicationController
   def index
-    @activities = Activity.order(:name)
+    @activities = Activity.order(:title)
   end
 end

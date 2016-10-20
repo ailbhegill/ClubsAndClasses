@@ -19,15 +19,15 @@
     <b>Days and times:</b>
     <%= truncate strip_tags(activity.days_and_times), length: 240 %>
     </div>
+    <div class="price_line">
+      <b>Price per class:</b>
+      <span class="price"><%= activity.price_per_class %></span>
+    </div>
     <div class="contact_line">
     <b>Contact Details:</b>
     <%= truncate strip_tags(activity.contact_person), length: 240 %>
     <%= truncate strip_tags(activity.contact_no), length: 240 %>
     <%= truncate strip_tags(activity.email), length: 240 %>
-    </div>
-    <div class="price_line">
-      <b>Price per class:</b>
-      <span class="price"><%= activity.price_per_class %></span>
     </div>
   </div>
 <% end %>
