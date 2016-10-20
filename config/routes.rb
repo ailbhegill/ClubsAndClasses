@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'catalog/index'
+
   resources :activities
 
   # The priority is based upon order of creation: first created -> highest priority.
