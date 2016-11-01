@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :enrollments
+
+  resources :members
+
   get 'catalog/index'
 
   resources :activities
