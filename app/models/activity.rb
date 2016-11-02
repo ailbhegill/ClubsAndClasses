@@ -11,7 +11,7 @@ validates :name, :description, :image_url, :county, :address, :days_and_times, :
 
   private
   # ensure that there are no line items referencing this product
-  def ensure_not_referenced_by_any_enrollments
+  def ensure_not_referenced_by_any_enrollment
     if enrollments.empty?
       return true
     else

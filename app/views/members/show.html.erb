@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<h2>Member Page</h2>
+<ul>
+  <% @member.enrollments.each do |item| %>
+    <li><%= item.activity.name %></li>
+  <% end %>
+</ul>

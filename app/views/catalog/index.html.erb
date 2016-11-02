@@ -9,28 +9,29 @@
   <div class="entry">
     <%= image_tag(activity.image_url) %>
     <!--<%= image_tag(activity.image_url, size: "100x100", class: 'list_image') %>-->    
-		<h3><%= activity.name %></h3>
+    <h3><%= activity.name %></h3>
     <p>
-    <%= sanitize activity.description %>
-		</p>
-		<p>
-    <b>Address:</b>
-    <%= sanitize activity.address %>
-    <%= sanitize activity.county %>
-		</p>
-		<p>
-    <b>Days and times:</b>
-    <%= sanitize activity.days_and_times %>
+      <%= sanitize activity.description %>
     </p>
-		<p>
-		<b>Contact Details:</b>
-    <%= sanitize activity.contact_person %>
-    <%= sanitize activity.contact_no%>
-    <%= sanitize activity.email%>
-		</p>
+    <p>
+      <b>Address:</b>
+      <%= sanitize activity.address %>
+      <%= sanitize activity.county %>
+    </p>
+    <p>
+      <b>Days and times:</b>
+      <%= sanitize activity.days_and_times %>
+    </p>
+    <p>
+      <b>Contact Details:</b>
+      <%= sanitize activity.contact_person %>
+      <%= sanitize activity.contact_no%>
+      <%= sanitize activity.email%>
+    </p>
     <div class="price_line">
       <b>Price per class:</b>
       <span class="price"><%= activity.price_per_class %></span>
+      <%= button_to 'Enroll', enrollments_path(activity_id: activity) %>
     </div>
   </div>
 <% end %>
