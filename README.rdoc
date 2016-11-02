@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Clubs and Classes site
+A website to display classes available in art, sport, music ,dance, martial arts etc. as well as clubs such as cycling clubs and book clubs. To bring people together with common interests and let people know what's going on in their area.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Using
+ruby 2.1.2
+Rails 4.1.6
