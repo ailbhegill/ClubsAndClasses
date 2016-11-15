@@ -27,7 +27,7 @@ class EnrollmentsController < ApplicationController
   # POST /enrollments.json
   def create
     activity = Activity.find(params[:activity_id])
-    @enrollment = @member.enrollments.build(activity: activity)
+    @enrollment = @member.add_product(product.id)
 
     respond_to do |format|
       if @enrollment.save

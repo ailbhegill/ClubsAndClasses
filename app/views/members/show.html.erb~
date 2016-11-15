@@ -2,9 +2,9 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>Your Pragmatic Cart</h2>
+<h2>Member Page</h2>
 <ul>
-  <% @cart.line_items.each do |item| %>
-    <li><%= item.product.title %></li>
+  <% @member.enrollments.each do |item| %>
+    <li><%= item.activity.name %></li>
   <% end %>
 </ul>
