@@ -44,6 +44,6 @@ class EnrollmentsControllerTest < ActionController::TestCase
       delete :destroy, id: @enrollment
     end
 
-    assert_redirected_to enrollments_path
+    assert_redirected_to members_path
   end
 end

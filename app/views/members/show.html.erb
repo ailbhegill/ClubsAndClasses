@@ -6,7 +6,8 @@
 <h2>Member Page</h2>
 <ul>
   <% @member.enrollments.each do |item| %>
-    <li><%= item.activity.name %></li>
+    <li><%= item.activity.name %>  <%= button_to('UnEnroll', enrollment_path(id: item), :method => :delete,
+      data: { confirm: 'Are you sure?' } )%></li>
   <% end %>
 </ul>
 </html>

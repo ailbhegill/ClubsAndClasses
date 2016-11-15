@@ -1,3 +1,4 @@
+<html>
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
@@ -5,6 +6,8 @@
 <h2>Member Page</h2>
 <ul>
   <% @member.enrollments.each do |item| %>
-    <li><%= item.activity.name %></li>
+    <li><%= item.activity.name %>  <%= button_to('UnEnroll', enrollment_path(activity_id: item.activity), :method => :delete, params: item,
+      data: { confirm: 'Are you sure?' } )%></li>
   <% end %>
 </ul>
+</html>
