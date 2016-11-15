@@ -35,7 +35,7 @@ class EnrollmentsControllerTest < ActionController::TestCase
   end
 
   test "should update enrollment" do
-    patch :update, id: @enrollment, enrollment: { activity_id: @enrollment.activity_id, member_id: @enrollment.member_id }
+    patch :update, id: @enrollment, enrollment: { activity_id: @enrollment.activity_id}
     assert_redirected_to enrollment_path(assigns(:enrollment))
   end
 

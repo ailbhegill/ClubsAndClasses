@@ -73,8 +73,8 @@ class MembersController < ApplicationController
       params.fetch(:member, {})
     end
 
-    def invalid_member
-      logger.error "Attempt to access invalid member #{params[:id]}"
-      redirect_to catalog_url, notice: 'Invalid member'
+    def invalid_cart
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_url, notice: 'Invalid cart'
     end
 end
