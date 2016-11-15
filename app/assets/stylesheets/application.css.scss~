@@ -19,7 +19,7 @@
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Comic Sans", serif;
-  color: dark red;
+  color: darkred;
   text-align: center;
 
   img {

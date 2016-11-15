@@ -9,7 +9,7 @@
 <%= content_tag :body, class: controller.controller_name do %>
   <div id="banner">
   	<!--<%= image_tag("logo.png") %>-->
-  	<%= @page_title || "Pragmatic Bookshelf" %>
+  	<%= @page_title || "Extra-Curriculars" %>
 	</div>
   <%= yield %>
 <% end %>
