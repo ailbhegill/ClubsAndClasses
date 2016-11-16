@@ -31,7 +31,7 @@
     <div class="price_line">
       <b>Price per class:</b>
       <span class="price"><%= activity.price_per_class %></span>
-      <%= button_to 'Enroll', enrollments_path(activity_id: activity) %>
+      <%= button_to 'Enroll', enrollments_path(activity_id: activity),remote: true %>
     </div>
   </div>
 <% end %>

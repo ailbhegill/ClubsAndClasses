@@ -16,6 +16,11 @@
     <ul>
 	<li><a href="http://0.0.0.0:3000">Home</a></li>
     </ul>
+    <% if @member %>
+      <%= hidden_div_if(@member.enrollments.empty?, id: 'member') do %>
+  <%= render @member %>
+<% end %>
+    <% end %>
   </div>
   <div id="main">
     <%= yield %>

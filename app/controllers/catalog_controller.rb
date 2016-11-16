@@ -1,4 +1,6 @@
 class CatalogController < ApplicationController
+  include CurrentMember
+  before_action :set_member
   def index
     @activities = Activity.order(:name)
   end

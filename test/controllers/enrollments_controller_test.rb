@@ -21,7 +21,7 @@ class EnrollmentsControllerTest < ActionController::TestCase
       post :create, activity_id: activities(:two)
     end
 
-    assert_redirected_to member_path(assigns(:enrollment).member)
+    assert_redirected_to catalog_path
   end
 
   test "should show enrollment" do
@@ -46,4 +46,10 @@ class EnrollmentsControllerTest < ActionController::TestCase
 
     assert_redirected_to catalog_path
   end
+  test "should create enrollment via ajax" do
+  assert_difference('Enrollment.count') do
+    xhr :post, :create, :activity_id => activities(:one).id
+  end
+  assert_response :success
+end
 end

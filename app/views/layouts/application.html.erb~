@@ -15,8 +15,12 @@
   <div id="side">
     <ul>
 	<li><a href="http://0.0.0.0:3000">Home</a></li>
-	<li><a href="http://www..../contact">Contact</a></li>
     </ul>
+    <% if @member %>
+      <div id="member">
+        <%= render @member %>
+      </div>
+    <% end %>
   </div>
   <div id="main">
     <%= yield %>
