@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_member
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 

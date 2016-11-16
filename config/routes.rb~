@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :users
+
+  resources :enrollments
+
+  resources :members
+
   get 'catalog/index'
 
   resources :activities
