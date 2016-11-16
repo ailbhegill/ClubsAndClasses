@@ -45,6 +45,6 @@ class MembersControllerTest < ActionController::TestCase
       delete :destroy, id: @member
     end
 
-    assert_redirected_to members_path
+    assert_redirected_to catalog_path
   end
 end

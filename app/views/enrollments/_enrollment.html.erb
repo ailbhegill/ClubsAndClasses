@@ -1,0 +1,7 @@
+<html>
+<tr>
+  <td><%= enrollment.activity.name %></td>
+  <td><%= button_to('UnEnroll', enrollment_path(id: enrollment), :method => :delete,
+  data: { confirm: 'Are you sure?' } )%></td>
+</tr>
+</html>
