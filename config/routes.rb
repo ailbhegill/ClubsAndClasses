@@ -18,6 +18,7 @@ end
   resources :activities
   
   root :to => 'catalog#index', :as => 'catalog'
+  root :to => 'users#new', :as => 'signup'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

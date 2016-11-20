@@ -62,7 +62,6 @@ class EnrollmentsController < ApplicationController
     @enrollment.destroy
     respond_to do |format|
       format.html { redirect_to catalog_url }
-      format.js
       format.json { head :no_content }
     end
   end

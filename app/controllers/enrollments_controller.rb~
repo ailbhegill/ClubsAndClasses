@@ -1,4 +1,5 @@
 class EnrollmentsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentMember
   before_action :set_member, only: [:create, :destroy]
   before_action :set_enrollment, only: [:show, :edit, :update, :destroy]

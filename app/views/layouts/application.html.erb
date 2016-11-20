@@ -14,7 +14,9 @@
   <div id="columns">
   <div id="side">
     <ul>
-	<li><a href="http://0.0.0.0:3000">Home</a></li>
+	<li><a href="http://localhost:3000/">Home</a></li>
+        <li><a href="http://localhost:3000/login">Login</a></li>
+        <li><a href="http://localhost:3000/users/new">Sign up</a></li>
     </ul>
     <% if @member %>
       <%= hidden_div_if(@member.enrollments.empty?, id: 'member') do %>
