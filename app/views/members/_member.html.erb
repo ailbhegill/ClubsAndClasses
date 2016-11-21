@@ -6,5 +6,7 @@
 <h2>Membership Requests</h2>
 <table>
     <%= render member.enrollments %>
+    <td class="print_section"><%= link_to "Print", member_path(member), class: "btn btn-primary" %></td>
+  </tr>
 </table>
 </html>

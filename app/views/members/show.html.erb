@@ -1,1 +1,34 @@
-<%= render @member %>
+<body onload="window.print();">
+<html>
+<h1>Clubs and Classes</h1>
+
+<% @member.enrollments.each do |enrollment| %>
+  <div class="entry">
+    <%= image_tag(enrollment.activity.image_url) %>
+    <h3><%= enrollment.activity.name %></h3>
+    <p>
+      <%= sanitize enrollment.activity.description %>
+    </p>
+    <p>
+      <b>Address:</b>
+      <%= sanitize enrollment.activity.address %>
+      <%= sanitize enrollment.activity.county %>
+    </p>
+    <p>
+      <b>Days and times:</b>
+      <%= sanitize enrollment.activity.days_and_times %>
+    </p>
+    <p>
+      <b>Contact Details:</b>
+      <%= sanitize enrollment.activity.contact_person %>
+      <%= sanitize enrollment.activity.contact_no%>
+      <%= sanitize enrollment.activity.email%>
+    </p>
+    <div class="price_line">
+      <b>Price per class:</b>
+      <span class="price"><%= enrollment.activity.price_per_class %></span>
+    </div>
+  </div>
+<% end %>
+</html>
+</body>
