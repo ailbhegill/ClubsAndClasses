@@ -1,8 +1,7 @@
 == README
 
 
-Clubs and Classes site
-A website to display classes available in art, sport, music ,dance, martial arts etc. as well as clubs such as cycling clubs and book clubs. To bring people together with common interests and let people know what's going on in their area.
+Clubs and Classes is a website to display classes available in art, sport, music ,dance, martial arts etc. As well as clubs, such as cycling clubs and book clubs. To bring people together with common interests and let people know what's going on in their area.
 
 Using
 ruby 2.1.2
